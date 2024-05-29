@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{727F706F-7977-48C0-804D-CBF2CCC69FB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ApplicationInGUI</RootNamespace>
+    <AssemblyName>ApplicationInGUI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="addStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="addStudent.Designer.cs">
+      <DependentUpon>addStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BL\AdminBL.cs" />
+    <Compile Include="BL\courseBl.cs" />
+    <Compile Include="BL\Muser.cs" />
+    <Compile Include="courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="courses.Designer.cs">
+      <DependentUpon>courses.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Delete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Delete.Designer.cs">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DL\AdminDL.cs" />
+    <Compile Include="DL\coursesDL.cs" />
+    <Compile Include="DL\MuserDL.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="personalInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="personalInfo.Designer.cs">
+      <DependentUpon>personalInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registration.Designer.cs">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scholarship.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scholarship.Designer.cs">
+      <DependentUpon>scholarship.cs</DependentUpon>
+    </Compile>
+    <Compile Include="scholarships.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="scholarships.Designer.cs">
+      <DependentUpon>scholarships.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search.Designer.cs">
+      <DependentUpon>search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignIn.Designer.cs">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUP.Designer.cs">
+      <DependentUpon>SignUP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="staff.Designer.cs">
+      <DependentUpon>staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update.Designer.cs">
+      <DependentUpon>update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserMenu.Designer.cs">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Validations.cs" />
+    <Compile Include="ViewFees.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewFees.Designer.cs">
+      <DependentUpon>ViewFees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStudents.Designer.cs">
+      <DependentUpon>ViewStudents.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="addStudent.resx">
+      <DependentUpon>addStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="courses.resx">
+      <DependentUpon>courses.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Delete.resx">
+      <DependentUpon>Delete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="personalInfo.resx">
+      <DependentUpon>personalInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Registration.resx">
+      <DependentUpon>Registration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scholarship.resx">
+      <DependentUpon>scholarship.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="scholarships.resx">
+      <DependentUpon>scholarships.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search.resx">
+      <DependentUpon>search.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignIn.resx">
+      <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUP.resx">
+      <DependentUpon>SignUP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="staff.resx">
+      <DependentUpon>staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update.resx">
+      <DependentUpon>update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserMenu.resx">
+      <DependentUpon>UserMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewFees.resx">
+      <DependentUpon>ViewFees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStudents.resx">
+      <DependentUpon>ViewStudents.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bacground .jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shutterstock_524044999.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\736683-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download-removebg-preview1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-icon-in-trendy-flat-style-isolated-on-white-background-approach-symbol-for-your-web-site-design-logo-app-ui-illustration-eps10-flat-style-for-graphic-design-vector.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images__1_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images-removebg-preview %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-percent-sign-percentage-computer-icons-symbol-5af395a196b639.5267709815259129936173.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-percent-sign-percentage-computer-icons-symbol-5af395a196b639.5267709815259129936173-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download__2_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-clipart-computer-icons-font-awesome-user-ill-people-thumbnail-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images__3_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\99-990080_people-search-icons-customer-view-icon-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3b5b217ce258702c0956cbf3b146acba_t-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download__3_-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\course-icon-19-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4961126-200-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\228122-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\people-search-icon-16-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\207-2073115_font-password-comments-password-icon-png-transparent-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\username-icon-png-5-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\role-management-13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alt_welcome-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stu.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stu1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stu2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\banner-welcome-students-removebg-preview.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
